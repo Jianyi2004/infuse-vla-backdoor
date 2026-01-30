@@ -6,8 +6,8 @@
   
   <!-- Primary Meta Tags -->
   <meta name="title" content="INFUSE: Backdooring Vision-Language-Action Models - Jianyi Zhou et al.">
-  <meta name="description" content="First backdoor attack on VLA base models that persists through user fine-tuning, achieving 91% ASR on simulations and 79.8% on real robots.">
-  <meta name="keywords" content="VLA models, backdoor attacks, embodied AI, robot security, vision-language-action, fine-tuning persistence, AI security">
+  <meta name="description" content="INFUSE: First backdoor attack on VLA base models that persists through user fine-tuning. Achieves 91% ASR on simulations and 79.8% on real robots.">
+  <meta name="keywords" content="VLA models, backdoor attacks, embodied AI, robot security, vision-language-action, fine-tuning persistence, machine learning security">
   <meta name="author" content="Jianyi Zhou, Yujie Wei, Ruichen Zhen, Bo Zhao, Xiaobo Xia, Rui Shao, Xiu Su, Shuo Yang">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -15,7 +15,7 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Harbin Institute of Technology">
-  <meta property="og:title" content="INFUSE: Inject Once Survive Later - Backdooring VLA Models">
+  <meta property="og:title" content="INFUSE: Backdooring VLA Models">
   <meta property="og:description" content="First backdoor attack on VLA base models that persists through user fine-tuning, achieving 91% ASR on simulations and 79.8% on real robots.">
   <meta property="og:url" content="https://jianyi2004.github.io/infuse-vla-backdoor/">
   <meta property="og:image" content="https://jianyi2004.github.io/infuse-vla-backdoor/static/images/method_overview.pdf">
@@ -48,7 +48,6 @@
   <meta name="citation_author" content="Su, Xiu">
   <meta name="citation_author" content="Yang, Shuo">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="CVPR 2026">
   <meta name="citation_pdf_url" content="https://jianyi2004.github.io/infuse-vla-backdoor/static/pdfs/paper.pdf">
   
   <!-- Additional SEO -->
@@ -65,7 +64,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <title>INFUSE: Backdooring VLA Models - Jianyi Zhou et al. | CVPR 2026</title>
+  <title>INFUSE: Backdooring VLA Models - Jianyi Zhou et al.</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -134,15 +133,11 @@
       }
     ],
     "datePublished": "2026-01-30",
-    "publisher": {
-      "@type": "Organization",
-      "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
-    },
     "url": "https://jianyi2004.github.io/infuse-vla-backdoor/",
     "image": "https://jianyi2004.github.io/infuse-vla-backdoor/static/images/method_overview.pdf",
     "keywords": ["VLA models", "backdoor attacks", "embodied AI", "robot security", "vision-language-action", "fine-tuning persistence"],
     "abstract": "Vision-Language-Action (VLA) models have become foundational to modern embodied AI systems. We propose INFUSE, the first backdoor attack framework for VLA base models that remains effective even with arbitrary user fine-tuning. INFUSE achieves 91.0% ASR on simulation environments and 79.8% on real-world robot tasks after user-side fine-tuning.",
-    "citation": "Zhou et al., INFUSE: Inject Once Survive Later, CVPR 2026",
+    "citation": "Zhou et al., INFUSE: Inject Once Survive Later, 2026",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -207,7 +202,7 @@
           <div class="work-info">
             <h5>INFUSE: Backdooring VLA Models</h5>
             <p>First persistent backdoor attack on Vision-Language-Action models that survives user fine-tuning.</p>
-            <span class="work-venue">CVPR 2026</span>
+            <span class="tag is-info">2026</span>
           </div>
           <i class="fas fa-external-link-alt"></i>
         </a>
@@ -245,8 +240,8 @@
                     <span class="author-block"><sup>1</sup>Harbin Institute of Technology, Shenzhen &nbsp;&nbsp; <sup>2</sup>Harbin Institute of Technology<br>
                     <sup>3</sup>Meituan Academy of Robotics &nbsp;&nbsp; <sup>4</sup>Shanghai Jiaotong University<br>
                     <sup>5</sup>National University of Singapore &nbsp;&nbsp; <sup>6</sup>Central South University<br>
-                    CVPR 2026</span>
-                    <span class="eql-cntrb"><small><br><sup>✉</sup>Corresponding author</small></span>
+                  </span>
+                  <span class="eql-cntrb"><small><br><sup>✉</sup>Corresponding author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -316,7 +311,7 @@
             While recent methods attempt to inject backdoors into VLA models, these backdoors are easily erased during downstream adaptation, as user-side fine-tuning with clean data significantly alters model parameters, rendering them impractical for real-world applications. To address these challenges, we propose <strong>INFUSE</strong> (<strong>IN</strong>jection into <strong>F</strong>ine-t<strong>U</strong>ne-in<strong>S</strong>ensitive modul<strong>E</strong>s), the first backdoor attack framework for VLA base models that remains effective even with arbitrary user fine-tuning.
           </p>
           <p>
-            INFUSE begins by analyzing parameter sensitivity across diverse fine-tuning scenarios to identify modules that remain largely unchanged—the fine-tune-insensitive modules. It then injects backdoors into these stable modules while freezing the rest, ensuring malicious behavior persists after extensive user fine-tuning. Comprehensive experiments across multiple VLA architectures demonstrate INFUSE's effectiveness. After user-side fine-tuning, INFUSE maintains mean attack success rates of <strong>91.0% on simulation environments</strong> and <strong>79.8% on real-world robot tasks</strong>, substantially surpassing BadVLA (38.8% and 36.6%, respectively), while preserving clean-task performance comparable to standard models.
+            INFUSE begins by analyzing parameter sensitivity across diverse fine-tuning scenarios to identify modules that remain stable (fine-tune-insensitive) and suitable for persistent backdoor injection. It then injects backdoors into these stable modules while freezing the rest, ensuring malicious behavior persists after extensive user fine-tuning. Comprehensive experiments across multiple VLA architectures demonstrate INFUSE's effectiveness. After user-side fine-tuning, INFUSE maintains mean attack success rates of <strong>91.0% on simulation environments</strong> and <strong>79.8% on real-world robot tasks</strong>, substantially surpassing BadVLA (38.8% and 36.6%, respectively), while preserving clean-task performance comparable to standard models.
           </p>
         </div>
       </div>
@@ -441,9 +436,8 @@
       </div>
       <pre id="bibtex-code"><code>@inproceedings{zhou2026infuse,
   title={Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning},
-  author={Zhou, Jianyi and Wei, Yujie and Zhen, Ruichen and Zhao, Bo and Xia, Xiaobo and Shao, Rui and Su, Xiu and Yang, Shuo},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2026},
+    author={Zhou, Jianyi and Wei, Yujie and Zhen, Ruichen and Zhao, Bo and Xia, Xiaobo and Shao, Rui and Su, Xiu and Yang, Shuo},
+    year={2026},
   url={https://jianyi2004.github.io/infuse-vla-backdoor/}
 }</code></pre>
     </div>
